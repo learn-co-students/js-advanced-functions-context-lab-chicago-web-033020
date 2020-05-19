@@ -60,14 +60,14 @@ let allWagesFor = function () {
     return payable
 }
 
-// let calculatePayroll = function (array){
-//     return array.map(emp => allWagesFor.call(this, emp)).reduce((total, rec) => total + rec)
-// }
+let calculatePayroll = function (array){
+    return array.map(emp => allWagesFor.call(emp)).reduce((total, rec) => total + rec)
+}
 
-let calculatePayroll = function(array){
-    return array.reduce(function(memo, rec){
-        return memo + allWagesFor.call(rec)
-    }, 0)
+// let calculatePayroll = function(array){
+//     return array.reduce(function(memo, rec){
+//         return memo + allWagesFor.call(rec)
+//     }, 0)
 }
 
 function findEmployeeByFirstName(array, name){
